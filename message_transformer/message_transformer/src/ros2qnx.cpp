@@ -109,8 +109,8 @@ int main(int argc, char** argv) {
 
   ROS2QNX ros2qnx;
   ROS_INFO("-----   ros2qnx node up   -----");
-  ros::Subscriber vel_sub = nh.subscribe("cmd_vel", 1, &ROS2QNX::CmdVelCallback, &ros2qnx);
-  ros::Subscriber vel_sub2 = nh.subscribe("cmd_vel_corrected", 1, &ROS2QNX::CmdVelCallback, &ros2qnx);
+  ros::Subscriber vel_sub = nh.subscribe("cmd_vel_quadruped", 1, &ROS2QNX::CmdVelCallback, &ros2qnx);
+  ros::Subscriber vel_sub2 = nh.subscribe("cmd_vel_quadruped_corrected", 1, &ROS2QNX::CmdVelCallback, &ros2qnx);
   ros::Subscriber kickball_sub = nh.subscribe("kick_ball", 1, &ROS2QNX::KickBallCallback, &ros2qnx);
   ros::Subscriber simplecmd_sub = nh.subscribe("simple_cmd", 1, &ROS2QNX::SimpleCMDCallback, &ros2qnx);
   ros::Subscriber complexcmd_sub = nh.subscribe("complex_cmd", 1, &ROS2QNX::ComplexCMDCallback, &ros2qnx);
